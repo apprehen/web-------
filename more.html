@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./Css/reset.css">
+  <link rel="stylesheet" href="./Css/base.css">
+  <link rel="stylesheet" href="./Css/more.css">
+  <link rel="stylesheet" href="/live2d/css/live2d.css">
+</head>
+<body>
+  <div class="bgc"></div>
+  <div class="home_top_cover">
+    <div class="user-info"><img class="avter" src="./img/2.jpeg"><h1>Apprenhen</h1></div>
+    <div class="home-nav">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="question.html">questions&bug</a></li>
+      <li><a href="photo.html">photo</a></li>
+      <li><a href="storeroom.html">Storeroom</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="more.html">More</a></li>
+    </div>
+  </div>
+  <div class="home">
+    <a href="chrome.html" target="_blank"><span></span><span></span><span></span><span></span>
+      chrome恐龙小游戏
+    </a>
+  </div>
+  <div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+  </div>
+  <ul class="swift-pic">
+    <li><input type="radio" name="spq" id="one" checked >
+        <label for="one"></label>
+        <div class="bj"></div>
+    </li>
+    <li><input type="radio" name="spq" id="two" >
+        <label for="two"></label>
+        <div class="bj"></div>
+    </li>
+    <li><input type="radio" name="spq" id="three">
+        <label for="three"></label>
+        <div class="bj"></div>
+    </li>
+    <li><input type="radio" name="spq" id="four">
+        <label for="four"></label>
+        <div class="bj"></div>
+    </li>
+    <li><input type="radio" name="spq" id="five">
+        <label for="five"></label>  
+        <div class="bj"></div>
+    </li>
+  </ul>
+  <div class="cartoon">
+    <h1>番剧推荐</h1>
+    <div class="content">
+      <!-- 存放背景图片 -->
+      <h2>轻音少女</h2>
+      <div class="content-ico"></div>
+      <div class="desc">K-ON是“轻音部”这一高中的社团简称，在这一社团中，五位少女成立了名为“放学后下午茶”(HTT)的乐队</div>
+      <div class="intro">
+        <li>呆唯
+          <img src="./img/qinyin/12.jpg">
+        </li>
+        <li>律队
+          <img src="./img/qinyin/13.jpg">
+        </li>
+        <li>秋山澪
+          <img src="./img/qinyin/14.jpg" alt="">
+        </li>
+        <li>琴吹紬
+          <img src="./img/qinyin/11.jpg" alt="">
+        </li>
+        <li>梓喵
+          <img src="./img/qinyin/15.jpg" alt="">
+        </li>
+      </div>
+      <div class="swift-img">
+        <li class="one"><img src="./img/qinyin/16.jpg"></li>
+        <li class="two"><img src="./img/qinyin/17.jpg"></li>
+        <div class="pointer">
+          <button></button>
+          <button></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=""></div>
+  <script>
+    let message_path = '/live2d/'
+  </script>
+<script src="/live2d/js/live2d.js"></script>
+<script src="/live2d/js/message.js"></script>
+<script type="text/javascript">
+  loadlive2d("live2d","/live2d/model/tia/model.json");
+  // 获取元素dom操作
+  let btn = document.querySelector(".pointer").querySelectorAll("button")
+  let lis = document.querySelector(".swift-img").querySelectorAll("li")
+  let index = 10;
+  for (let i=0;i<btn.length;i++){
+    btn[i].addEventListener('click',()=>{
+      lis[i].style.zIndex=index
+      index++
+    })
+  }
+</script> 
+</body>
+</html>

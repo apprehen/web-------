@@ -1,0 +1,75 @@
+.bgc {
+  background-image: url("../img/photo.jpeg");
+  height: 1000px;
+}
+.swift {
+  width: 100%;
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+.swift .imgs {
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  width: 70%;
+  background-image: url("../img/swift/1.jpg");
+  background-size: cover;
+  padding-top: 35%;
+  position: relative;
+  transition: 0.75s all linear;
+}
+.swift .imgs .pre {
+  top: 50%;
+  left: -3%;
+  transform: rotateY(-50%);
+  position: absolute;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 40px;
+  color: #555;
+  cursor: pointer;
+}
+.swift .imgs .next {
+  top: 50%;
+  right: -3%;
+  transform: rotateY(-50%);
+  position: absolute;
+  border: none;
+  outline: none;
+  color: #555;
+  font-size: 40px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.swift .quet {
+  height: 20px;
+  margin-top: 7px;
+  width: 9%;
+  justify-content: space-between;
+  display: flex;
+  box-sizing: border-box;
+}
+.swift .quet li {
+  box-sizing: border-box;
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  outline: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.4);
+}
+.swift .quet li:hover {
+  height: 14px;
+  width: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  outline: 3px solid rgba(0, 0, 0, 0.1);
+}
+.swift .quet .cur {
+  height: 14px;
+  width: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  outline: 3px solid rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,227 @@
+@font-face {
+  font-family: 'descfont';
+  src: url("../myfont/字心坊萌喵体.ttf");
+}
+.bgc{
+  background-image: url("../img/more.png");
+  height: 3000px;
+}
+.home{
+  left: 10%;
+  font-size: 24px;
+  width: 250px;
+  height: 40px;
+  color: rgb(244, 131, 233);
+  border-radius: 10px;
+  border: 3px solid #fff;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 1;
+  top: 100px;
+  left: 20px;
+}
+.home a{
+  display: block;
+  color: #666;
+}
+.home:hover a{
+  color: #222;
+  transition: 0.25s;
+  display: block;
+}
+.home:hover a span{
+  transform: translateY(0) scale(2);
+}
+span{
+  z-index: -1;
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translateY(150%);
+  left: calc((var( --n ) - 1) * 25% );
+  transition: 0.5s;
+  transition-delay: calc((var( --n ) - 1) * 0.1s );
+}
+span:nth-child(1){
+  --n:1;
+}
+span:nth-child(2){
+  --n:2;
+}
+span:nth-child(3){
+  --n:3;
+}
+span:nth-child(4){
+  --n:4;
+}
+.swift-pic {
+  width: 1200px;
+  height: 520px;
+  border-radius: 10px;
+  margin: 160px auto 0;
+}
+.swift-pic > li {
+  height: 500px;
+  float: left;
+  border-radius: 10px;
+}
+input {
+  display: none;
+}
+.swift-pic > li > label {
+  display: block;
+  width: 125px;
+  height: 500px;
+  border-radius: 10px;
+  transition: 1.3s;
+}
+/* 点击事件label宽度变为700px */
+.swift-pic > li > input:checked ~ label {
+  width: 700px;
+}
+.swift-pic > li > .bj {
+    /* opacity透明度为0 */
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 调整层级 */
+  z-index: -1;
+  /* background: rgb(55, 52, 238); */
+  /* 设置过渡时长 */
+  transition: 2s;
+  /* 设置边缘颜色融合 */
+  filter: blur(4px);
+}
+/*  */
+.swift-pic > li > input:checked ~ .bj{
+    /* 点击label后背景图片透明度为1，在任意一个li上加个默认checked，则默认选中该图片背景。 */
+    opacity: 1;
+}
+.swift-pic > li:nth-child(1) ,ul > li:nth-child(1) > .bj{
+  background: url("../img/qinyin/07.jpg") no-repeat center/cover;
+}
+.swift-pic > li:nth-child(2),ul > li:nth-child(2) > .bj {
+  background: url("../img/qinyin/08.jpg") no-repeat center/cover;
+}
+.swift-pic > li:nth-child(3) ,ul > li:nth-child(3) > .bj{
+  background: url("../img/qinyin/03.jpg") no-repeat center/cover;
+}
+.swift-pic > li:nth-child(4),ul > li:nth-child(4) > .bj {
+  background: url("../img/qinyin/04.jpg") no-repeat center/cover;
+}
+.swift-pic > li:nth-child(5) ,ul > li:nth-child(5) > .bj{
+  background: url("../img/qinyin/05.jpg") no-repeat center/cover;
+}
+.cartoon{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 100px;
+  align-items: center;
+  h1{
+    padding: 15px;
+    line-height: 80px;
+    width: 60%;
+    height: 80px;
+    border-radius: 10px;
+    background: linear-gradient(445deg, #c74525, #175df5e5);
+    color: #ff6666;
+    font-family: "宋体";
+    font-size: 74px;
+    font-weight: bold;
+  }
+  .content{
+    width: 80%;
+    font-size: 24px;
+    font-family: descfont;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+      text-align: center;
+      margin: 12px 0;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .content-ico{
+      background-image: url("../img/KON.png");
+      width: 20%;
+      background-repeat: no-repeat;
+      height: 100px;
+      background-size: contain;
+      background-position: center center;
+      margin-bottom: 12px;
+    }
+    .desc{
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .intro{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      li{
+        width: 15%;
+        text-align: center;
+        img{
+          width: 200px;
+          border-radius: 15px;
+        }
+      }
+    }
+    .swift-img{
+      width: 80%;
+      position: relative;
+      left: 0px;
+      height: 685px;
+      overflow: hidden;
+      li{
+        position: absolute;
+        width: 100%;
+        border-radius: 15px;
+        img{
+          width: 100%;
+          border-radius: 15px;
+        }
+      }
+      .one{
+        z-index: 1;
+      }
+      .two{
+        z-index: 0;
+      }
+      .pointer{
+        position: absolute;
+        z-index: 999;
+        display: flex;
+        left:50%;
+        justify-content: space-between;
+        width: 75px;
+        height: 10px;
+        transform: translateX(-50%);
+        bottom: 20px;
+        button{
+          width: 35px;
+          background-color: rgba(255, 255, 255, 0.65);
+          border-radius: 5px;
+          border: 1px solid #999;
+          outline: none;
+          &:hover{
+            background-color: rgb(255, 255, 255);
+          }
+        }
+      }
+    }
+  }
+}

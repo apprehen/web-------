@@ -1,0 +1,520 @@
+.bgc {
+  background-image: url("../img/about.png");
+  height: 3000px;
+}
+.container {
+  transition: 0.33s left linear;
+  position: fixed;
+  top: 25%;
+  left: 0px;
+  width: 430px;
+  height: 100px;
+  display: flex;
+}
+.container .player {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.container .player .player-track {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  bottom: 0;
+  left: 15px;
+  padding: 13px 22px 10px 184px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px 15px 0 0;
+  /* 改变top时的过渡效果 */
+  transition: top 0.3s ease;
+}
+.container .player .player-track.active {
+  /* 上移 */
+  top: -95px;
+}
+.container .player .player-track .album-name {
+  color: #333;
+  font-size: 17px;
+  font-weight: bold;
+}
+.container .player .player-track .track-name {
+  color: #888;
+  font-size: 13px;
+  margin: 3px 0 12px 0;
+}
+.container .player .player-track .track-time {
+  height: 12px;
+  line-height: 12px;
+  margin-bottom: 4px;
+  overflow: hidden;
+}
+.container .player .player-track .track-time .current-time {
+  color: #ff668f;
+  font-size: 11px;
+  transition: 0.3s ease;
+  float: left;
+}
+.container .player .player-track .track-time .total-time {
+  color: #ff668f;
+  font-size: 11px;
+  transition: 0.3s ease;
+  float: right;
+}
+.container .player .player-track .progress-box {
+  position: relative;
+  height: 4px;
+  background-color: #ead2d7;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container .player .player-track .progress-box .hover-time {
+  position: absolute;
+  top: -30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 6px;
+  border-radius: 4px;
+  display: none;
+}
+.container .player .player-track .progress-box .hover-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  z-index: 2;
+}
+.container .player .player-track .progress-box .progress-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fd6d94;
+  border-radius: 4px;
+  z-index: 1;
+  width: 0;
+  /* 改变width时的过渡效果 */
+  transition: width 0.2s ease;
+}
+.container .player .player-content {
+  position: relative;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 15px;
+  z-index: 2;
+  box-shadow: 0 30px 80px #656565;
+}
+.container .player .player-content .album-cover {
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  left: 40px;
+  box-shadow: 0 0 0 10px #fff;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+.container .player .player-content .album-cover::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #d6dee6;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  margin: -10px auto auto auto;
+  box-shadow: inset 0 0 0 2px #fff;
+  z-index: 1;
+}
+.container .player .player-content .album-cover.active {
+  top: -60px;
+  box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
+}
+.container .player .player-content .album-cover img {
+  display: block;
+  width: 100%;
+  height: 0%;
+  object-fit: cover;
+  opacity: 0;
+}
+.container .player .player-content .album-cover img.active {
+  height: 100%;
+  opacity: 1;
+}
+.container .player .player-content .album-cover.active img.active {
+  /* 执行动画：动画名 时长 线性的 无限次播放 */
+  animation: rotateAlbumCover 3s linear infinite;
+}
+.container .player .player-content .play-controls {
+  width: 255px;
+  height: 100%;
+  float: right;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-right: 2px;
+}
+.container .player .player-content .play-controls .control {
+  flex: 1;
+}
+.container .player .player-content .play-controls .control .button {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.container .player .player-content .play-controls .control .button:hover {
+  background-color: #d6dee6;
+}
+.container .player .player-content .play-controls .control .button:hover i {
+  color: #fff;
+}
+.container .player .player-content .play-controls .control .button i {
+  color: #d6dee6;
+  font-size: 30px;
+  transition: 0.2s ease;
+}
+.container .disp {
+  transition: 0.33s;
+  border-radius: 10px;
+  height: 100px;
+  line-height: 100px;
+  color: #485b61;
+  font-size: 50px;
+  cursor: pointer;
+}
+.container .disp:hover {
+  color: #240b27;
+}
+@keyframes rotateAlbumCover {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+.top {
+  width: 100%;
+}
+.top .banner-cover {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  margin-top: 4.8%;
+}
+.top .banner-cover .userIntro {
+  width: 30%;
+  text-align: center;
+}
+.top .banner-cover .userIntro img {
+  vertical-align: top;
+  width: 150px;
+  border-radius: 50%;
+}
+.top .banner-cover .userIntro h1 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+.top .banner-cover .contast {
+  margin-left: 5%;
+  margin-top: 30px;
+}
+.top .banner-cover .contast i {
+  font-size: 32px;
+  margin-right: 100px;
+}
+.top .banner-cover .contast i:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  color: #57c8f5;
+  background: rgba(255, 255, 255, 0.4);
+}
+.top .banner-cover .contast i:nth-child(2) {
+  width: 40px;
+  height: 40px;
+  color: #139e13;
+  background: rgba(176, 212, 246, 0.4);
+}
+.top .banner-cover .contast i:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  color: #3e75c3;
+  background: rgba(173, 237, 225, 0.4);
+}
+.top .banner-cover .contast i:nth-child(4) {
+  width: 40px;
+  height: 40px;
+  color: #20b0e3;
+  border-radius: 5%;
+}
+.top .banner-cover .contast i:nth-child(5) {
+  width: 40px;
+  height: 40px;
+  color: yellow;
+  background: rgba(161, 205, 238, 0.4);
+}
+.content {
+  background: rgba(255, 255, 255, 0.416);
+  box-shadow: 5 5 10px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  width: 80%;
+  margin: 50px 10%;
+}
+.content h1 {
+  height: 30px;
+  line-height: 45px;
+  width: 15%;
+  margin-left: 41.5%;
+  font-size: 24px;
+  text-align: center;
+}
+.content h1 hr {
+  margin-top: -3%;
+  width: 100%;
+  height: 6px;
+  background-color: #004389;
+  border-radius: 3px;
+}
+.content hr {
+  margin-top: 3%;
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+}
+.content .tag {
+  margin-top: 1%;
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.content .tag li {
+  font-size: 18px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  padding: 0 10px;
+  text-align: center;
+  border-radius: 15px;
+}
+.content .tag li:nth-child(1) {
+  background: rgba(37, 36, 41, 0.8);
+}
+.content .tag li:nth-child(2) {
+  background: #d0a953;
+}
+.content .tag li:nth-child(3) {
+  background: #d07653;
+}
+.content .tag li:nth-child(4) {
+  background: #d05b53;
+}
+.content .tag li:nth-child(5) {
+  background: #53d0b7;
+}
+.content .tag li:nth-child(6) {
+  background: #59d053;
+}
+.content .tag li:nth-child(7) {
+  background: #8b53d0;
+}
+.content .tag li:nth-child(8) {
+  background: #d053bb;
+}
+.content .descri {
+  width: 100%;
+}
+.content .descri li {
+  font-size: 18px;
+  margin-left: 2%;
+  height: 45px;
+  line-height: 45px;
+}
+.content .aby {
+  width: 100%;
+}
+.content .aby li {
+  font-size: 18px;
+  margin-left: 2%;
+  height: 45px;
+  line-height: 45px;
+  display: flex;
+}
+.content .aby li span {
+  width: 20%;
+}
+.content .aby li div {
+  width: 70%;
+  margin-top: 1.5%;
+  height: 20px;
+  border-radius: 10px;
+  margin-left: -5%;
+  position: relative;
+}
+.content .aby li div span {
+  position: absolute;
+  top: -12px;
+  left: -35px;
+  font-size: 15px;
+}
+.content .aby li:nth-child(1) div {
+  width: 45%;
+  background-color: #63b7eb;
+}
+.content .aby li:nth-child(2) div {
+  width: 30%;
+  background-color: #637ceb;
+}
+.content .aby li:nth-child(3) div {
+  width: 55%;
+  background-color: #63ebe9;
+}
+.content .aby li:nth-child(4) div {
+  width: 55%;
+  background-color: #ebeb63;
+}
+.content .aby li:nth-child(5) div {
+  width: 50%;
+  background-color: #eb8763;
+}
+.content .aby li:nth-child(6) div {
+  width: 40%;
+  background-color: #77eb63;
+}
+.content .aby li:nth-child(7) div {
+  width: 70%;
+  background-color: #eb6863;
+}
+.outer {
+  background: rgba(255, 255, 255, 0.416);
+  box-shadow: 5 5 10px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  width: 80%;
+  overflow: hidden;
+  margin: 50px 10%;
+  justify-content: space-evenly;
+}
+.outer .outer-top {
+  width: 80%;
+  display: flex;
+  font-size: 16px;
+  margin: 1% 10%;
+}
+.outer .outer-top div {
+  width: 50%;
+}
+.outer .head {
+  font-weight: 400;
+  font-size: 18px;
+  width: 100%;
+  display: flex;
+}
+.outer .head span {
+  width: 6%;
+  margin-left: 10%;
+}
+.outer .head #userName {
+  margin-bottom: 8px;
+  width: 30%;
+  border-bottom: 1px black solid;
+}
+.outer .head #userName:focus {
+  border-bottom: 1px rgba(212, 42, 42, 0.887) solid;
+}
+.outer #userWords {
+  resize: none;
+  width: 80%;
+  margin-left: 10%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  padding: 15px;
+}
+.outer #userWords::placeholder {
+  color: #999;
+}
+.outer .word_footer {
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+.outer .word_footer .wordsNum {
+  width: 20%;
+  height: 20px;
+}
+.outer .word_footer #btn {
+  width: 8%;
+  height: 38px;
+  border-radius: 19px;
+  border: none;
+  outline: none;
+  background-color: rgba(69, 178, 233, 0.761);
+  margin-top: -4.5%;
+}
+.outer .con {
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+}
+.outer #myList {
+  width: 80%;
+  margin-left: 10%;
+  height: 300px;
+  margin-bottom: 30px;
+}
+.outer #myList li {
+  margin-top: 8px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.outer #myList li img {
+  width: 80px;
+  border-radius: 50%;
+}
+.outer #myList li .right {
+  height: 30px;
+  width: 50%;
+  font-size: 24px;
+  margin-left: 2%;
+}
+.outer #myList li .right .top {
+  width: 100%;
+  height: 100%;
+}
+.outer #myList li .right .top a {
+  margin-left: 15%;
+  font-size: 16px;
+  color: #555;
+  transition: 0.5s;
+}
+.outer #myList li .right .top a:hover {
+  color: rgba(228, 91, 37, 0.761);
+  transition: 0.5s;
+}
+.outer #myList li .right .words {
+  font-size: 34px;
+  padding: 5px;
+}

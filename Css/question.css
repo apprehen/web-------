@@ -1,0 +1,330 @@
+.bgc {
+  background-image: url("../img/1.png");
+  margin: 0;
+  height: 1500px;
+}
+.banner {
+  width: 70%;
+  height: 500px;
+  margin: 7% auto;
+  display: flex;
+  justify-content: space-between;
+}
+.banner .banner-left {
+  width: 65%;
+  height: 100%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 0 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.banner .banner-left .bg-que {
+  margin-top: 6px;
+  width: 100%;
+  height: 60%;
+  background: url("../img/question.jpeg");
+  background-size: 100%;
+  border-radius: 20px;
+}
+.banner .banner-left .content {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border-left: #73ea73 8px solid;
+  background: rgba(121, 202, 242, 0.3);
+}
+.banner .banner-left .content h1 {
+  font-size: 28px;
+  font-weight: 500;
+}
+.banner .banner-left .content div {
+  margin-top: 10px;
+}
+.banner .banner-left .question {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.banner .banner-left .bottom-nav {
+  width: 100%;
+  height: 6%;
+  position: relative;
+}
+.banner .banner-left .bottom-nav i.icon-ziyuan {
+  color: red;
+  left: 0;
+  position: absolute;
+  font-size: 14px;
+  bottom: 0;
+}
+.banner .banner-left .bottom-nav i.icon-shijian {
+  position: absolute;
+  left: 20%;
+  bottom: 0px;
+  font-size: 16px;
+}
+.banner .banner-left .bottom-nav i.icon-issue {
+  position: absolute;
+  left: 50%;
+  font-size: 16px;
+  bottom: 0;
+  color: #002f89;
+  font-size: 20px;
+}
+.banner .banner-left .bottom-nav i.icon-read {
+  position: absolute;
+  right: 3%;
+  bottom: 0;
+  width: 100px;
+  text-align: center;
+  line-height: 26px;
+  border-radius: 13px;
+  color: #fff;
+  background-color: #cd4f4f;
+}
+.banner .banner-right {
+  width: 25%;
+  height: 100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.banner .banner-right .user-item {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  height: 40%;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.banner .banner-right .user-item img {
+  width: 80px;
+  border-radius: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 15px;
+}
+.banner .banner-right .user-item .content {
+  display: flex;
+  width: 100%;
+  height: 12%;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  font-size: 18px;
+}
+.banner .banner-right .user-item .content li.line {
+  margin-top: 3px;
+  height: 90%;
+  width: 2px;
+  background-color: black;
+}
+.banner .banner-right .user-item a {
+  display: block;
+  font-size: 22px;
+  width: 100%;
+  text-align: center;
+  margin-top: 22px;
+  line-height: 30px;
+  border-radius: 15px;
+  color: white;
+  background-color: #24fdb5;
+}
+.banner .banner-right .icon-item {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 20%;
+  background-color: #fff;
+  border-radius: 15px;
+  line-height: 40px;
+}
+.banner .banner-right .icon-item .ji {
+  margin-bottom: 10px;
+}
+.banner .banner-right .icon-item i {
+  margin: 0px 8%;
+  height: 50%;
+  font-size: 30px;
+}
+.banner .banner-right .icon-item i:nth-child(2) {
+  width: 40px;
+  height: 40px;
+  color: #57c8f5;
+  background: rgba(255, 255, 255, 0.4);
+}
+.banner .banner-right .icon-item i:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  color: #139e13;
+  background: rgba(176, 212, 246, 0.4);
+}
+.banner .banner-right .icon-item i:nth-child(4) {
+  width: 40px;
+  height: 40px;
+  color: #3e75c3;
+  background: rgba(173, 237, 225, 0.4);
+}
+.banner .banner-right .icon-item i:nth-child(5) {
+  width: 40px;
+  height: 40px;
+  color: #20b0e3;
+  border-radius: 5%;
+}
+.banner .banner-right .icon-item i:nth-child(6) {
+  width: 40px;
+  height: 40px;
+  color: yellow;
+  background: rgba(161, 205, 238, 0.4);
+}
+.banner .banner-right .friend-item {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 25%;
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.banner .banner-right .friend-item img {
+  width: 60px;
+  border-radius: 50%;
+  margin-top: 15px;
+}
+.banner .banner-right .friend-item .username {
+  text-align: center;
+  font-size: 20px;
+}
+.banner-two {
+  width: 70%;
+  height: 500px;
+  margin: 7% auto;
+  display: flex;
+  justify-content: space-between;
+}
+.banner-two .banner-left {
+  width: 65%;
+  height: 100%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 0 10px;
+}
+.banner-two .banner-left .bg-que {
+  margin-top: 6px;
+  width: 100%;
+  height: 60%;
+  background: url("../img/question2.jpeg");
+  background-size: 100%;
+  border-radius: 20px;
+}
+.banner-two .banner-left .content {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border-left: #73ea73 8px solid;
+  background: rgba(121, 202, 242, 0.3);
+}
+.banner-two .banner-left .content h1 {
+  height: 40px;
+  line-height: 60px;
+  font-size: 28px;
+  font-weight: 500;
+}
+.banner-two .banner-left .content div {
+  margin-top: 10px;
+}
+.banner-two .banner-left .question {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.banner-two .banner-left .bottom-nav {
+  width: 100%;
+  height: 6%;
+  position: relative;
+}
+.banner-two .banner-left .bottom-nav i.icon-ziyuan {
+  color: red;
+  left: 0;
+  position: absolute;
+  font-size: 14px;
+  bottom: 0;
+}
+.banner-two .banner-left .bottom-nav i.icon-shijian {
+  position: absolute;
+  left: 20%;
+  bottom: 0px;
+  font-size: 16px;
+}
+.banner-two .banner-left .bottom-nav i.icon-issue {
+  position: absolute;
+  left: 50%;
+  font-size: 16px;
+  bottom: 0;
+  color: #002f89;
+  font-size: 20px;
+}
+.banner-two .banner-left .bottom-nav i.icon-read {
+  position: absolute;
+  right: 3%;
+  bottom: 0;
+  width: 100px;
+  text-align: center;
+  line-height: 26px;
+  border-radius: 13px;
+  color: #fff;
+  background-color: #cd4f4f;
+}
+.banner-two .banner-right {
+  background-color: #fff;
+  width: 25%;
+  height: 100%;
+  border-radius: 15px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.banner-two .banner-right div {
+  width: 100%;
+  height: 16%;
+  font-size: 18px;
+  position: relative;
+}
+.banner-two .banner-right div span {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+.banner-two .banner-right li {
+  font-size: 20px;
+  border-radius: 20px;
+  height: 12%;
+  padding: 3px 0;
+  margin: 3px 0;
+  width: 100%;
+  position: relative;
+  color: #565b62;
+  transition: 0.5s;
+}
+.banner-two .banner-right li:hover {
+  background-color: #e2e5f4;
+  color: #9da2d0;
+  transition: 0.5s;
+}
+.banner-two .banner-right li span {
+  position: absolute;
+  top: 25px;
+  left: 22px;
+  color: #999d9c;
+}

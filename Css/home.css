@@ -1,0 +1,114 @@
+.bgc {
+  background-image: url("../img/bgc1.jpg");
+}
+.banner-cover {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  margin-top: 4.8%;
+}
+.banner-cover .userIntro {
+  width: 30%;
+  text-align: center;
+}
+.banner-cover .userIntro img {
+  vertical-align: top;
+  width: 150px;
+  border-radius: 50%;
+}
+.banner-cover .userIntro h1 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+.banner-cover .contast {
+  margin-left: 5%;
+  margin-top: 30px;
+}
+.banner-cover .contast i {
+  font-size: 32px;
+  margin-right: 100px;
+}
+.banner-cover .contast i:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  color: #57c8f5;
+  background: rgba(255, 255, 255, 0.4);
+}
+.banner-cover .contast i:nth-child(2) {
+  width: 40px;
+  height: 40px;
+  color: #139e13;
+  background: rgba(176, 212, 246, 0.4);
+}
+.banner-cover .contast i:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  color: #3e75c3;
+  background: rgba(173, 237, 225, 0.4);
+}
+.banner-cover .contast i:nth-child(4) {
+  width: 40px;
+  height: 40px;
+  color: #20b0e3;
+  border-radius: 5%;
+}
+.banner-cover .contast i:nth-child(5) {
+  width: 40px;
+  height: 40px;
+  color: yellow;
+  background: rgba(161, 205, 238, 0.4);
+}
+.banner-cover .contast div {
+  width: 100px;
+  height: 100px;
+}
+.banner-cover .contast .imgsweix {
+  width: 100px;
+}
+.banner-cover .imgs {
+  width: 70%;
+  position: relative;
+}
+.banner-cover .imgs div {
+  width: 15%;
+  text-align: center;
+}
+.banner-cover .imgs div img {
+  width: 100%;
+}
+.banner-cover .imgs .qq {
+  top: -2%;
+  left: 12%;
+  position: absolute;
+  display: none;
+  transition: 0.5s;
+}
+.banner-cover .imgs .weix {
+  position: absolute;
+  left: 26.5%;
+  top: -2%;
+  display: none;
+}
+.banner-cover .imgs .gith {
+  position: absolute;
+  left: 40.5%;
+  top: -2%;
+  display: none;
+}
+.banner-cover .imgs .bili {
+  width: 50%;
+  position: absolute;
+  left: 38%;
+  top: -2%;
+  display: none;
+}
+.banner-cover .imgs .youxiang {
+  width: 50%;
+  position: absolute;
+  left: 52%;
+  top: -2%;
+  display: none;
+}
