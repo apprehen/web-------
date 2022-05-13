@@ -302,3 +302,15 @@ ul > li:nth-child(5) > .bj {
   transition: 0.4s;
   transform: scale(1.2);
 }
+.shuji {
+  background-image: url("../img/shuji.gif");
+  width: 80px;
+  height: 98px;
+  background-position: center center;
+  background-size: contain;
+  position: absolute;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  top: 80px;
+  right: 20px;
+}
