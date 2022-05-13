@@ -2,9 +2,13 @@
   font-family: 'descfont';
   src: url("../myfont/字心坊萌喵体.ttf");
 }
+@font-face {
+  font-family: 'ff14font';
+  src: url("../myfont/锐字巅峰粗黑简.ttf");
+}
 .bgc{
   background-image: url("../img/more.png");
-  height: 3000px;
+  height: 4000px;
 }
 .home{
   left: 10%;
@@ -132,7 +136,7 @@ input {
   h1{
     padding: 15px;
     line-height: 80px;
-    width: 60%;
+    width: 80%;
     height: 80px;
     border-radius: 10px;
     background: linear-gradient(445deg, #c74525, #175df5e5);
@@ -220,6 +224,74 @@ input {
           &:hover{
             background-color: rgb(255, 255, 255);
           }
+        }
+      }
+    }
+  }
+}
+.ff14{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: center;
+  h1{
+    padding: 15px;
+    line-height: 80px;
+    width: 80%;
+    height: 80px;
+    border-radius: 10px;
+    background: linear-gradient(445deg, #c74525, #175df5e5);
+    color: #ff6666;
+    font-family: "宋体";
+    font-size: 74px;
+    font-weight: bold;
+  }
+  .content{
+    width: 80%;
+    font-size: 24px;
+    font-family: ff14font;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+      text-align: center;
+      margin: 12px 0;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .imgs{
+      width: 80%;
+      img{
+        border-radius: 15px;
+        width: 100%;
+      }
+    }
+    h3{
+      margin: 10px 0;
+    }
+    .user-imgs{
+      overflow: hidden;
+      margin-bottom: 15px;
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      div{
+        width: 30%;
+        overflow: hidden;
+        border-radius: 15px;
+        transition: 0.4s;
+      }
+      img{
+        overflow: hidden;
+        border-radius: 15px;
+        width: 100%;
+        transition: 0.4s;
+        &:hover{
+          transition: 0.4s;
+          transform: scale(1.2);
         }
       }
     }
