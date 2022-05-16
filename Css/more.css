@@ -8,7 +8,7 @@
 }
 .bgc {
   background-image: url("../img/more.png");
-  height: 4000px;
+  height: 5000px;
 }
 .home {
   left: 10%;
@@ -191,12 +191,53 @@ ul > li:nth-child(5) > .bj {
   width: 200px;
   border-radius: 15px;
 }
-.cartoon .content .swift-img {
+.cartoon .content .swift-video {
   width: 80%;
   position: relative;
   left: 0px;
   height: 685px;
-  overflow: hidden;
+}
+.cartoon .content .swift-video li {
+  position: absolute;
+  width: 100%;
+  border-radius: 15px;
+}
+.cartoon .content .swift-video li video {
+  margin-top: 40px;
+  width: 100%;
+  border-radius: 15px;
+}
+.cartoon .content .swift-video .one {
+  z-index: 1;
+}
+.cartoon .content .swift-video .two {
+  z-index: 0;
+}
+.cartoon .content .swift-video .pointer {
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  left: 50%;
+  justify-content: space-between;
+  width: 75px;
+  height: 10px;
+  transform: translateX(-50%);
+  top: 20px;
+}
+.cartoon .content .swift-video .pointer button {
+  width: 35px;
+  background-color: rgba(255, 255, 255, 0.65);
+  border-radius: 5px;
+  border: 1px solid #999;
+  outline: none;
+}
+.cartoon .content .swift-video .pointer button:hover {
+  background-color: #ffffff;
+}
+.cartoon .content .swift-img {
+  width: 80%;
+  height: 685px;
+  position: relative;
 }
 .cartoon .content .swift-img li {
   position: absolute;
@@ -204,13 +245,17 @@ ul > li:nth-child(5) > .bj {
   border-radius: 15px;
 }
 .cartoon .content .swift-img li img {
+  margin-top: 40px;
   width: 100%;
   border-radius: 15px;
 }
 .cartoon .content .swift-img .one {
-  z-index: 1;
+  z-index: 2;
 }
 .cartoon .content .swift-img .two {
+  z-index: 1;
+}
+.cartoon .content .swift-img .three {
   z-index: 0;
 }
 .cartoon .content .swift-img .pointer {
@@ -222,7 +267,7 @@ ul > li:nth-child(5) > .bj {
   width: 75px;
   height: 10px;
   transform: translateX(-50%);
-  bottom: 20px;
+  top: 20px;
 }
 .cartoon .content .swift-img .pointer button {
   width: 35px;

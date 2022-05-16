@@ -81,10 +81,20 @@
           <img src="./img/qinyin/15.jpg" alt="">
         </li>
       </div>
-      <div class="swift-img">
-        <li class="one"><img src="./img/qinyin/16.jpg"></li>
-        <li class="two"><img src="./img/qinyin/17.jpg"></li>
+      <div class="swift-video">
+        <li class="one"><video src="./source/qinyin/dont-say-lazy.mp4" controls></video></li>
+        <li class="two"><video src="./source/qinyin/No-Thank-You.mp4"  controls></video></li>
         <div class="pointer">
+          <button></button>
+          <button></button>
+        </div>
+      </div>
+      <div class="swift-img">
+        <li class="one"><img src="./img/qinyin/112.jpg"></li>
+        <li class="two"><img src="./img/qinyin/113.jpg"></li>
+        <li class="three"><img src="./img/qinyin/111.jpg"></li>
+        <div class="pointer">
+          <button></button>
           <button></button>
           <button></button>
         </div>
@@ -119,13 +129,22 @@
 <script type="text/javascript">
   loadlive2d("live2d","/live2d/model/tia/model.json");
   // 获取元素dom操作
-  let btn = document.querySelector(".pointer").querySelectorAll("button")
-  let lis = document.querySelector(".swift-img").querySelectorAll("li")
-  let index = 10;
+  let btn = document.querySelector(".swift-video").querySelector(".pointer").querySelectorAll("button")
+  let lis = document.querySelector(".swift-video").querySelectorAll("li")
+  let btnImg = document.querySelector(".swift-img").querySelector(".pointer").querySelectorAll("button")
+  let lisImg = document.querySelector(".swift-img").querySelectorAll("li")
+  let index = 0
+  let indexImg = 0
   for (let i=0;i<btn.length;i++){
     btn[i].addEventListener('click',()=>{
       lis[i].style.zIndex=index
       index++
+    })
+  }
+  for (let i=0;i<btnImg.length;i++){
+    btnImg[i].addEventListener('click',()=>{
+      lisImg[i].style.zIndex=indexImg
+      indexImg++
     })
   }
 </script> 
